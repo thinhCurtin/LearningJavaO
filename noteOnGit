@@ -1,0 +1,15 @@
+1st create a new repo folder in github.com (here is LearningJavaO)
+2nd  git remote add origin https://github.com/thinhCurtin/LearningJavaO
+3rd git init    ( in the local folder)
+4th git commit -m "message"
+5th git push --set-upstream origin master
+
+
+// adding new files to track
+
+git add -A
+
+or
+
+git add .
+git commit -a
