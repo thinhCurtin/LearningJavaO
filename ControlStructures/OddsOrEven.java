@@ -1,8 +1,9 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class OddsOrEven {
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
+    Random rand = new Random();
 
     System.out.println("\nLet's play a game called \"Odds or Evens\"");
 
@@ -18,6 +19,33 @@ public class OddsOrEven {
       System.out.println(name +"has picked evens, The computer will be odds");
     } else {
       System.out.println(name +" has picked invalid input");
+    }
+
+    System.out.println("----------------------------");
+
+    System.out.println("\nHow many \"finger\" do you  put out ?");
+    int fingers = input.nextInt();
+
+    int computer = rand.nextInt(6);
+    System.out.println("The computer plays " + computer + "\"finger\"");
+
+    int sum = fingers + computer;
+    System.out.println(fingers + " + " + computer + " = " + sum);
+
+    if(sum%2 == 0){
+      System.out.println("The sum was even");
+      if(fingers%2 ==0){
+        System.out.println("The user wins");
+      } else {
+        System.out.println("The computer wins");
+      }
+    } else {
+      System.out.println("The sume was odd");
+      if(fingers%2 ==0){
+        System.out.println("The computer wins");
+      } else {
+        System.out.println("The user wins");
+      }
     }
 
   }
